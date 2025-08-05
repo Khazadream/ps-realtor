@@ -4,6 +4,7 @@
     import { PROPERTIES } from '@store/stores'
     import { SendNUI } from '@utils/SendNUI'
     import { onMount } from 'svelte'
+    import LANG from '@i18n/default'
 
     export let selectedApartment: IApartment = null;
     export let apartment: IApartment = null;
@@ -39,11 +40,11 @@
 
         <div class="location-tenants-info">
             <img src="images/user-location-pin.png" alt="User Location Icon" />
-            <p>{apartmentData.currentTenants || 0} Global Tenants</p>
+            <p>{apartmentData.currentTenants || 0} {LANG.GlobalTenants}</p>
         </div>
 
         <button class="select-apt-button">
-            Select Apartment
+            {LANG.SelectApartment}
         </button>
     </div>
 </div>

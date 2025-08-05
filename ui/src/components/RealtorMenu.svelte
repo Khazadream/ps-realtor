@@ -5,11 +5,12 @@
 	import ApartmentsBase from './apartments/ApartmentsBase.svelte'
 	import ListPropertiesBase from './list-properties/ListPropertiesBase.svelte'
 	import { SendNUI } from '@utils/SendNUI'
+	import LANG from '@i18n/default'
 
 	// basic available tabs
 	let availableNavTabs: ITab[] = [
 		{
-			name: 'Properties',
+			name: LANG.Properties,
 			icon: 'fas fa-home',
 			component: PropertyBase,
 		},
@@ -19,7 +20,7 @@
 	REALTOR_GRADE.subscribe((value) => {
 		if (value >= $CONFIG.setApartments) {
 			availableNavTabs.push({
-				name: 'Apartments',
+				name: LANG.Apartments,
 				icon: 'fas fa-building',
 				component: ApartmentsBase,
 			});
@@ -27,7 +28,7 @@
 
 		if (value >= $CONFIG.listNewProperty) {
 			availableNavTabs.push({
-				name: 'List New Property',
+				name: LANG.ListNewProperty,
 				icon: 'fas fa-plus-circle',
 				component: ListPropertiesBase,
 			});
@@ -45,12 +46,12 @@
 
 	let footerNavs: ITab[] = [
 		{
-			name: 'Help Center',
+			name: LANG.HelpCenter,
 			icon: 'fas fa-life-ring',
 			component: '',
 		},
 		{
-			name: 'Logout',
+			name: LANG.Logout,
 			icon: 'fas fa-arrow-right-from-bracket',
 			component: '',
 		}
@@ -79,23 +80,6 @@
 						<p>{tab.name}</p>
 					</div>
 				{/each}
-
-				<div class="discord-wrapper">
-					<div class="discord-emoji">
-						<img src="images/discord-emoji.png" alt="Discord Emoji" />
-					</div>
-
-					<div class="discord-text">
-						<p class="bold-text">More PS Stuff?</p>
-						<p class="small-text">
-							Visit Project Sloth’s official Discord community for all our other releases.
-						</p>
-					</div>
-
-					<button class="visit-discord-btn">
-						Visit Discord
-					</button>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -22,7 +22,7 @@ local zoneCreator = {
     lowestPoint = nil
 }
 
-local polyText = '[C] - +/- point  \n [H] finish  \n [Scroll] change height \n [K] Edit Point'
+local polyText = '[C] - +/- Mettre un point  \n [=] Finir  \n [Scroll] changer la hauteur \n [K] Edit Point'
 
 local function render()
     local points = zoneCreator.polygon
@@ -64,7 +64,7 @@ local function render()
             zoneCreator.height += 0.5
         end
 
-        if IsDisabledControlJustPressed(0, 104) then -- H
+        if IsDisabledControlJustPressed(0, 83) then -- H
             zoneCreator.destroy()
             SetHide(false)
             return {points = points, thickness = zoneCreator.height}
@@ -346,7 +346,7 @@ local function mloDoor()
 			end
 
 
-			if IsDisabledControlJustPressed(0, 104) then -- H
+			if IsDisabledControlJustPressed(0, 83) then -- H
                 if lastEntity then
                     SetEntityDrawOutline(lastEntity, false)
                 end

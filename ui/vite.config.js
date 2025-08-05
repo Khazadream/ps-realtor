@@ -19,6 +19,7 @@ export default defineConfig({
       "@providers": resolve("./src/providers"),
       "@store": resolve("./src/store"),
       "@utils": resolve("./src/utils"),
+      "@i18n": resolve("./src/i18n"),
       "@typings": resolve("./src/typings"),
     },
   },
