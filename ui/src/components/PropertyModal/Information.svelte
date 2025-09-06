@@ -16,25 +16,25 @@
 			<div
 				class="bg-[color:var(--color-tertiary)] grid place-items-center p-2 px-4"
 			>
-				{selectedProperty.owner ? 'Owned' : 'Not Owned'}
+				{selectedProperty.owner ? 'Propriétaire' : 'Non propriétaire'}
 			</div>
 			{#if $REALTOR_GRADE !== null && selectedProperty.for_sale}
 				<div
 					class="w-fit p-2 px-4 bg-[color:var(--color-tertiary)] items-center justify-center flex flex-row gap-4"
 				>
 					<i class="fas fa-dollar-sign" />
-					<p>For Sale</p>
+					<p>À vendre</p>
 				</div>
 			{/if}
 		</div>
 
 		<div class="flex flex-row gap-2">
-			<p class="text-2xl font-bold">Price</p>
+			<p class="text-2xl font-bold">Prix</p>
 			<p class="text-2xl">${selectedProperty.price.toLocaleString()}</p>
 		</div>
 
 		<div class="flex flex-row gap-2">
-			<p class="text-2xl font-bold">Shell</p>
+			<p class="text-2xl font-bold">Shell</p> <!-- TODO: Change to shell name -->
 			<p class="text-2xl">{selectedProperty.shell}</p>
 		</div>
 
@@ -58,7 +58,7 @@
 			}}
 		>
 			<i class="fa-solid fa-location-dot" />
-			<p class="text-2xl font-bold">Set Waypoint</p>
+			<p class="text-2xl font-bold">Afficher sur la carte</p>
 		</button>
 	</div>
 {/if}

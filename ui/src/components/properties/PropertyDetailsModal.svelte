@@ -23,7 +23,7 @@
                     <div class="header">
                         <div class="heading-title-wrapper">
                             <i class="fas fa-circle-info info-icon"></i>
-                            <p>Property Details</p>
+                            <p>Détails de la propriété</p>
                         </div>
                         <div on:click={() => selectedProperty = null}>
                             <i class="fas fa-xmark close-icon"></i>
@@ -59,19 +59,19 @@
 
                                 <button class="waypoint" on:click={() => SendNUI('setWaypoint', selectedProperty.door_data)}>
                                     <i class="fas fa-location-dot"></i>
-                                    <p>Set Waypoint</p>
+                                    <p>Afficher sur la carte</p>
                                 </button>
 
                                 <div class="tiles-wrapper">
                                     {#if $REALTOR_GRADE >= 0 && selectedProperty.for_sale}
                                         <div class="each-tile">
                                             <i class="fas fa-dollar-sign"></i>
-                                            For Sale
+                                            À vendre
                                         </div>
                                     {/if}
                                     <div class="each-tile">
                                         <i class="fas fa-image"></i>
-                                        Gallery: {$SHELLS[selectedProperty.shell] ? $SHELLS[selectedProperty.shell].imgs.length : 0}
+                                        Galerie: {$SHELLS[selectedProperty.shell] ? $SHELLS[selectedProperty.shell].imgs.length : 0}
                                     </div>
 
                                     <div class="each-tile">
@@ -81,7 +81,7 @@
                                     
                                     <div class="each-tile">
                                         <i class="fas fa-truck-front"></i>
-                                        Garage: {selectedProperty.garage_data ? Object.keys(selectedProperty.garage_data).length > 0 ? 'Yes' : 'No' : 'No'}
+                                        Garage: {selectedProperty.garage_data ? Object.keys(selectedProperty.garage_data).length > 0 ? 'Oui' : 'Non' : 'Non'}
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                     </div>
                     <!-- {#if $REALTOR_GRADE >= $CONFIG.manageProperty} -->
                         <div class="large-footer-modal-footer">
-                            <button on:click={() => manageProperty = true}>Manage Property</button>
+                            <button on:click={() => manageProperty = true}>Gérer la propriété</button>
                         </div>
                     <!-- {/if} -->
                 </div>

@@ -16,7 +16,11 @@
 			<img
 				src={property.extra_imgs[0]
 					? property.extra_imgs[0].url
-					: $SHELLS[property.shell].imgs[0].url}
+					: (
+						$SHELLS[property.shell].imgs[0]
+						? $SHELLS[property.shell].imgs[0].url
+						: 'https://via.placeholder.com/150'
+					)}
 				alt=""
 			/>
 		{:else}

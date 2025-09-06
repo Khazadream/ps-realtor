@@ -168,15 +168,15 @@
 		<img src="images/apts-bg.png" alt="Apartments Background" />
 
 		<div class="search-data">
-			<p>Find your next property purchase</p>
+			<p>Trouver votre prochaine propriété</p>
 			<p class="light-text">
-				From houses, to garages, to the best sales.
+				De maisons, à garages, aux meilleures ventes.
 			</p>
 
 			<div class="search-bar">
 				<input
 					type="text"
-					placeholder="Explore all real estate"
+					placeholder="Explorer toutes les propriétés"
 					bind:value={searchTerm}
 				/>
 				<i class="fas fa-magnifying-glass" />
@@ -185,7 +185,7 @@
 	</div>
 
 	<div class="properties-heading-wrapper">
-		<p class="heading">All Properties Listed</p>
+		<p class="heading">Toutes les propriétés listées</p>
 
 		<div class="filters-wrapper">
 			<div>

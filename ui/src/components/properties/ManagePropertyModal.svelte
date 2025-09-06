@@ -120,7 +120,7 @@
 				<div class="header">
 					<div class="heading-title-wrapper">
 						<i class="fas fa-pen info-icon" />
-						<p>Manage Property</p>
+						<p>Gérer la propriété</p>
 					</div>
 					<div on:click={() => (manageProperty = false)}>
 						<i class="fas fa-xmark close-icon" />
@@ -132,9 +132,9 @@
 				>
 					<div class="data-details-manage-property">
 						<div class="left-column">
-							<p class="heading">Live Description</p>
+							<p class="heading">Description en direct</p>
 							<p class="info">
-								Change the settings after the creation!
+								Modifiez les paramètres après la création !
 							</p>
 						</div>
 
@@ -144,7 +144,7 @@
 									id="sell-property"
 									class="form-row-wrapper"
 								>
-									<p class="label">Sell Property</p>
+									<p class="label">Vendre la propriété</p>
 
 									<div class="action-row">
 										<SetNotSetIndicator
@@ -176,7 +176,7 @@
 									id="finalize-sell-property"
 									class="form-row-wrapper"
 								>
-									<p class="label">Finalize Sell Property</p>
+									<p class="label">Finaliser la vente</p>
 
 									<div class="action-row">
 										<SetNotSetIndicator
@@ -189,7 +189,7 @@
 										/>
 										<input
 											type="text"
-											placeholder="ID: 34343434343"
+											placeholder="ID du joueur: 34343434343"
 											style="width: 10vw;"
 											bind:value={finalizedOwner}
 										/>
@@ -199,12 +199,11 @@
 												updatePropertyValues(
 													'UpdateOwner',
 													{
-														targetSrc:
-															finalizedOwner,
+														targetSrc: finalizedOwner,
 													},
 													'owner',
 													finalizedOwner
-												)}>Request</button
+												)}>Proposer à la vente</button
 										>
 									</div>
 								</div>
@@ -220,7 +219,7 @@
 							    	<div class="action-row">
 							    		<textarea
 							    			rows="3"
-							    			placeholder="Write a short and sweet description about the property..."
+							    			placeholder="Écrivez une courte et concise description de la propriété..."
 							    			style="width: 18vw;"
 							    			bind:value={description}
 							    			on:keyup={() =>
@@ -235,7 +234,7 @@
 							    </div>
 
 							    <div id="manage-price" class="form-row-wrapper">
-							    	<p class="label">Manage Price</p>
+							    	<p class="label">Gérer le prix</p>
     
 							    	<div class="action-row">
 							    		<input
@@ -259,7 +258,7 @@
 							    	id="manage-shell-type"
 							    	class="form-row-wrapper"
 							    >
-							    	<p class="label">Manage Shell</p>
+							    	<p class="label">Gérer le shell</p>
     
 							    	<div class="action-row">
 							    		<FormWrapperDropdown
@@ -287,7 +286,7 @@
 							    	class="form-row-wrapper"
 							    	style="margin-top: 2vw"
 							    >
-							    	<p class="label">Add Images</p>
+							    	<p class="label">Ajouter des images</p>
     
 							    	<div class="action-row">
 							    		<input
@@ -306,7 +305,7 @@
 							    		/>
 							    		<button
 							    			class="regular-button"
-							    			on:click={addNewImage}>Add</button
+							    			on:click={addNewImage}>Ajouter</button
 							    		>
 							    	</div>
     
@@ -322,7 +321,7 @@
     
 		                        {#if selectedProperty.shell !== 'mlo'}
 							        <div id="manage-door" class="form-row-wrapper">
-							        	<p class="label">Manage Door</p>
+							        	<p class="label">Gérer la porte</p>
     
 							        	<div class="action-row">
 							        		<SetNotSetIndicator
@@ -336,17 +335,17 @@
 							        			class="regular-button"
 							        			on:click={() =>
 							        				handleZonePlacement('door')}
-							        			>New Location</button
+							        			>Nouvelle location</button
 							        		>
 							        		<button class="disable-button"
-							        			>Remove</button
+							        			>Supprimer</button
 							        		>
 							        	</div>
 							        </div>
 							    {/if}
     
 							    <div id="manage-garage" class="form-row-wrapper">
-							    	<p class="label">Manage Garage</p>
+							    	<p class="label">Gérer le garage</p>
 
 							    	<div class="action-row">
 							    		<SetNotSetIndicator
@@ -360,7 +359,7 @@
 							    			class="regular-button"
 							    			on:click={() =>
 							    				handleZonePlacement('garage')}
-							    			>New Location</button
+							    			>Nouvelle location</button
 							    		>
 							    		<button
 							    			class="disable-button"
@@ -370,7 +369,7 @@
 							    					{},
 							    					'garage_data',
 							    					null
-							    				)}>Remove</button
+							    				)}>Supprimer</button
 							    		>
 							    	</div>
 							    </div>
@@ -382,7 +381,7 @@
 				<div class="large-footer-modal-footer-manage-property">
 					{#if $REALTOR_GRADE >= $CONFIG.deleteProperty}
 						<button class="delete-button" on:click={deleteProperty}>
-							Delete Property
+							Supprimer la propriété
 						</button>
 					{/if}
 				</div>
