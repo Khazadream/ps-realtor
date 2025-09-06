@@ -13,15 +13,11 @@
 	in:fly={{ y: 10, duration: 250 }}
 >
 
-	{#if property.extra_imgs[0] ? property.extra_imgs[0].url : $SHELLS[property.shell].imgs?[0].url}
+	{#if property.extra_imgs[0] ? property.extra_imgs[0].url : $SHELLS[property.shell].imgs[0].url}
 		<img
 			src={property.extra_imgs[0]
 				? property.extra_imgs[0].url
-				: (
-					$SHELLS[property.shell].imgs?[0]
-					? $SHELLS[property.shell].imgs?[0].url
-					: 'https://via.placeholder.com/150'
-				)}
+				: $SHELLS[property.shell].imgs[0].url}
 			alt=""
 			class="w-full h-[20rem] object-cover object-center"
 		/>

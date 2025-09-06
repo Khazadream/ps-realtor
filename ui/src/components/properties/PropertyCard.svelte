@@ -7,20 +7,16 @@
 		property: IProperty = null,
 		selectedProperty: IProperty = null
 
-		console.log(property.extra_imgs[0] && property.extra_imgs[0].url,  $SHELLS[property.shell].imgs[0].url, Array.isArray($SHELLS[property.shell].imgs[0]))
+		console.log(property.extra_imgs[0] && property.extra_imgs[0].url,  $SHELLS[property.shell].imgs[0].url)
 </script>
 
 <div {id} class="property-card-wrapper group">
 	<div class="w-full h-fit grid place-items-center relative">
-		{#if property.extra_imgs[0] ? property.extra_imgs[0].url : Array.isArray($SHELLS[property.shell].imgs[0]) ? $SHELLS[property.shell].imgs[0][0].url : $SHELLS[property.shell].imgs[0].url}
+		{#if property.extra_imgs[0] ? property.extra_imgs[0].url : $SHELLS[property.shell].imgs[0].url}
 			<img
 				src={property.extra_imgs[0]
 					? property.extra_imgs[0].url
-					: (
-						$SHELLS[property.shell].imgs[0]
-						? Array.isArray($SHELLS[property.shell].imgs[0]) ? $SHELLS[property.shell].imgs[0][0].url : $SHELLS[property.shell].imgs[0].url
-						: 'https://via.placeholder.com/150'
-					)}
+					: $SHELLS[property.shell].imgs[0].url}
 				alt=""
 			/>
 		{:else}
@@ -62,7 +58,7 @@
 			<div class="each-tile">
 				<i class="fas fa-image" />
 				Gallery: {$SHELLS[property.shell]
-					? Array.isArray($SHELLS[property.shell].imgs) ? $SHELLS[property.shell].imgs.length : $SHELLS[property.shell].imgs[0].length
+					? $SHELLS[property.shell].imgs.length
 					: 0}
 			</div>
 

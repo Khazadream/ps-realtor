@@ -15,7 +15,7 @@
 	in:fly={{ y: 10, duration: 250 }}
 >
 	<img
-		src={(apartmentData.imgs && apartmentData.imgs.length > 0) ? apartmentData.imgs[0].url : 'https://via.placeholder.com/150'}
+		src={apartmentData.imgs[0].url}
 		alt=""
 		class="w-full h-[20rem] object-cover object-center"
 	/>

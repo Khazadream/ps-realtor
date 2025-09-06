@@ -71,7 +71,7 @@
                                     {/if}
                                     <div class="each-tile">
                                         <i class="fas fa-image"></i>
-                                        Galerie: {$SHELLS[selectedProperty.shell] ? $SHELLS[selectedProperty.shell].imgs.length : 0}
+                                        Gallery: {$SHELLS[selectedProperty.shell] ? $SHELLS[selectedProperty.shell].imgs.length : 0}
                                     </div>
 
                                     <div class="each-tile">
