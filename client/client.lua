@@ -125,6 +125,7 @@ end)
 if Config.UseCommand then
 	RegisterCommand("housing", function()
 		local PlayerData = QBCore.Functions.GetPlayerData()
+		if not PlayerData.job.name == "realestate" then return end
 		if not PlayerData.metadata["isdead"] and not PlayerData.metadata["inlaststand"] and not PlayerData.metadata["ishandcuffed"] and not IsPauseMenuActive() then
 			toggleUI(not UIOpen)
 		end
